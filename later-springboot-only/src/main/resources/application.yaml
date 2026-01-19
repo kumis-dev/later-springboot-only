@@ -7,8 +7,13 @@ spring:
       hibernate.jdbc.time_zone: UTC+03:00
     hibernate:
       ddl-auto: none
+    defer-datasource-initialization: true
   datasource:
     username: "dbuser"
     password: "12345"
     url: "jdbc:postgresql://localhost:5432/later"
     driver-class-name: "org.postgresql.Driver"
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
